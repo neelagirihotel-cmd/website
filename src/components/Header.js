@@ -9,6 +9,7 @@ import './Header.css';
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bookUrl, setBookUrl] = useState('https://letsbook.me/booking/022577');
 
   // Close menu when clicking a link
   const closeMenu = () => setMobileMenuOpen(false);
@@ -18,6 +19,15 @@ export default function Header() {
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
+    
+    // Generate booking url with dates
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const checkin = today.toISOString().split('T')[0];
+    const checkout = tomorrow.toISOString().split('T')[0];
+    setBookUrl(`https://letsbook.me/booking/022577?checkin=${checkin}&checkout=${checkout}&adults=2&children=0`);
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -47,9 +57,9 @@ export default function Header() {
             <Link href="/contact#enquiry" onClick={closeMenu}>
               <button className={scrolled || mobileMenuOpen ? "btn-outline" : "btn-outline-gold"} style={{ padding: '8px 16px', fontSize: '0.75rem' }}>Enquire Now</button>
             </Link>
-            <Link href="/contact#enquiry" onClick={closeMenu}>
+            <a href={bookUrl} onClick={closeMenu} target="_blank" rel="noopener noreferrer">
               <button className="btn-primary" style={{ padding: '8px 24px', fontSize: '0.75rem' }}>Book Your Stay</button>
-            </Link>
+            </a>
           </div>
         </nav>
         

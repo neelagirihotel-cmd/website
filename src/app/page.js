@@ -11,6 +11,7 @@ export const metadata = {
 import { MapPin, BedDouble, Briefcase, Leaf, HeartHandshake, Compass } from 'lucide-react';
 import FadeIn from '../components/animations/FadeIn';
 import StaggerContainer, { StaggerItem } from '../components/animations/StaggerContainer';
+import BookingWidget from '../components/BookingWidget';
 
 export default function Home() {
   return (
@@ -42,6 +43,9 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
+
+      {/* Booking Widget */}
+      <BookingWidget />
 
       {/* Welcome Section */}
       <section className={`section container ${styles.welcomeSection}`}>
