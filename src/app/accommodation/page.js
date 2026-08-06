@@ -31,7 +31,7 @@ export default function Accommodation() {
               <p>Perfect for solo travellers and short business visits seeking efficiency without compromising comfort.</p>
               <div className={styles.cardActions}>
                 <Link href="/accommodation/smart-rooms" className="btn-outline">View Details</Link>
-                <Link href="#" className="btn-primary">Book Now</Link>
+                <a href="https://letsbook.me/booking/022577" className="btn-primary">Book Now</a>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function Accommodation() {
               <p>Created for professionals requiring additional space, privacy, and productivity during extended stays.</p>
               <div className={styles.cardActions}>
                 <Link href="/accommodation/business-suites" className="btn-outline">View Details</Link>
-                <Link href="#" className="btn-primary">Book Now</Link>
+                <a href="https://letsbook.me/booking/022577" className="btn-primary">Book Now</a>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Accommodation() {
               <p>Our finest accommodation offers spacious interiors, elegant furnishings, and an elevated stay experience.</p>
               <div className={styles.cardActions}>
                 <Link href="/accommodation/premium-suite" className="btn-outline">View Details</Link>
-                <Link href="#" className="btn-primary">Book Now</Link>
+                <a href="https://letsbook.me/booking/022577" className="btn-primary">Book Now</a>
               </div>
             </div>
           </div>

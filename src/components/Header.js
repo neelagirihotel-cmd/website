@@ -57,7 +57,7 @@ export default function Header() {
             <Link href="/contact#enquiry" onClick={closeMenu}>
               <button className={scrolled || mobileMenuOpen ? "btn-outline" : "btn-outline-gold"} style={{ padding: '8px 16px', fontSize: '0.75rem' }}>Enquire Now</button>
             </Link>
-            <a href={bookUrl} onClick={closeMenu} target="_blank" rel="noopener noreferrer">
+            <a href={bookUrl} onClick={closeMenu}>
               <button className="btn-primary" style={{ padding: '8px 24px', fontSize: '0.75rem' }}>Book Your Stay</button>
             </a>
           </div>

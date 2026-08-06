@@ -49,7 +49,7 @@ export default function PremiumSuite() {
           </p>
           
           <div className={styles.luxuryActions}>
-            <Link href="#" className="btn-primary">Book Now</Link>
+            <a href="https://letsbook.me/booking/022577" className="btn-primary">Book Now</a>
             <Link href="/contact#enquiry" className="btn-outline">Enquire</Link>
           </div>
         </div>

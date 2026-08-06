@@ -37,7 +37,9 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={1.0} direction="up">
             <div className={styles.heroActions}>
-              <button className="btn-primary">Book Your Stay</button>
+              <a href="https://letsbook.me/booking/022577">
+                <button className="btn-primary">Book Your Stay</button>
+              </a>
               <Link href="/heritage"><button className="btn-outline" style={{ borderColor: '#fff', color: '#fff' }}>Explore Our Heritage</button></Link>
             </div>
           </FadeIn>
@@ -226,7 +228,9 @@ export default function Home() {
               <p className={styles.sectionLead} style={{maxWidth: '800px', margin: '0 auto 40px auto'}}>
                 Whether your journey brings you to Kozhikode for business, leisure, or a brief stop before continuing onward, Hotel Neelagiri Heritage welcomes you with warmth, comfort, and impeccable service.
               </p>
-              <button className="btn-primary">Book your stay today</button>
+              <a href="https://letsbook.me/booking/022577">
+                <button className="btn-primary">Book your stay today</button>
+              </a>
             </div>
           </FadeIn>
         </div>

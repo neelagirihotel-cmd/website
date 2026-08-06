@@ -80,16 +80,32 @@
 
 @media (max-width: 768px) {
   .widgetContainer {
-    flex-direction: column;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px 15px;
   }
   
-  .inputGroup,
-  .buttonGroup {
+  .inputGroup {
     width: 100%;
+    min-width: 0;
+  }
+
+  .buttonGroup {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .bookingWidget {
-    margin-top: -60px;
+    margin-top: -40px;
+    padding: 0 15px;
+  }
+
+  .inputGroup input,
+  .inputGroup select {
+    padding: 10px;
+    height: 44px;
+    font-size: 0.95rem;
   }
 }
