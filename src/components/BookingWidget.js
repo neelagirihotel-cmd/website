@@ -1,62 +1,79 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import './DatePickerCustom.css';
 import styles from './BookingWidget.module.css';
 
 export default function BookingWidget() {
-  const [checkin, setCheckin] = useState('');
-  const [checkout, setCheckout] = useState('');
+  const [checkinDate, setCheckinDate] = useState(null);
+  const [checkoutDate, setCheckoutDate] = useState(null);
   const [adults, setAdults] = useState('2');
   const [children, setChildren] = useState('0');
   
-  const [minCheckin, setMinCheckin] = useState('');
-  const [minCheckout, setMinCheckout] = useState('');
+  const [minCheckin, setMinCheckin] = useState(null);
 
   useEffect(() => {
     const today = new Date();
+    today.setHours(0, 0, 0, 0);
     const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
     
-    const todayStr = today.toISOString().split('T')[0];
-    const tomorrowStr = tomorrow.toISOString().split('T')[0];
-    
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setCheckin(todayStr);
+    setCheckinDate(today);
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setCheckout(tomorrowStr);
+    setCheckoutDate(tomorrow);
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMinCheckin(todayStr);
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMinCheckout(tomorrowStr);
+    setMinCheckin(today);
   }, []);
 
-  const handleCheckinChange = (e) => {
-    const newCheckin = e.target.value;
-    setCheckin(newCheckin);
+  const handleCheckinChange = (date) => {
+    setCheckinDate(date);
     
-    if (newCheckin) {
-      const checkinDate = new Date(newCheckin);
-      
-      const newMinCheckoutDate = new Date(checkinDate);
+    if (date) {
+      const newMinCheckoutDate = new Date(date);
       newMinCheckoutDate.setDate(newMinCheckoutDate.getDate() + 1);
-      const newMinCheckoutStr = newMinCheckoutDate.toISOString().split('T')[0];
       
-      setMinCheckout(newMinCheckoutStr);
-
-      if (checkout && new Date(checkout) <= checkinDate) {
-        setCheckout(newMinCheckoutStr);
+      if (checkoutDate && checkoutDate <= date) {
+        setCheckoutDate(newMinCheckoutDate);
       }
     }
   };
 
+  const formatDate = (date) => {
+    if (!date) return '';
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
   const handleBookNow = (e) => {
     e.preventDefault();
-    if (!checkin || !checkout) {
+    if (!checkinDate || !checkoutDate) {
         alert("Please select check-in and check-out dates.");
         return;
     }
-    const url = `https://letsbook.me/booking/022577?checkin=${checkin}&checkout=${checkout}&adults=${adults}&children=${children}`;
+    const checkinStr = formatDate(checkinDate);
+    const checkoutStr = formatDate(checkoutDate);
+    
+    const url = `https://letsbook.me/booking/022577?checkin=${checkinStr}&checkout=${checkoutStr}&adults=${adults}&children=${children}`;
     window.location.href = url;
+  };
+
+  const getMinCheckout = () => {
+    if (checkinDate) {
+      const min = new Date(checkinDate);
+      min.setDate(min.getDate() + 1);
+      return min;
+    }
+    if (minCheckin) {
+      const min = new Date(minCheckin);
+      min.setDate(min.getDate() + 1);
+      return min;
+    }
+    return new Date();
   };
 
   return (
@@ -64,21 +81,21 @@ export default function BookingWidget() {
       <div className={styles.widgetContainer}>
         <div className={styles.inputGroup}>
           <label>Check In</label>
-          <input 
-            type="date" 
-            value={checkin} 
-            min={minCheckin}
+          <DatePicker 
+            selected={checkinDate} 
             onChange={handleCheckinChange} 
+            minDate={minCheckin}
+            dateFormat="MMM d, yyyy"
             required 
           />
         </div>
         <div className={styles.inputGroup}>
           <label>Check Out</label>
-          <input 
-            type="date" 
-            value={checkout} 
-            min={minCheckout}
-            onChange={(e) => setCheckout(e.target.value)} 
+          <DatePicker 
+            selected={checkoutDate} 
+            onChange={(date) => setCheckoutDate(date)} 
+            minDate={getMinCheckout()}
+            dateFormat="MMM d, yyyy"
             required 
           />
         </div>
