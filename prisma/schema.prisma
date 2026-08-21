@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("ADMIN")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Customer {
+  id            String   @id @default(uuid())
+  name          String
+  mobile        String   @unique
+  lastStay      DateTime?
+  customerType  String   // e.g. Leisure, Corporate
+  city          String?
+  optIn         Boolean  @default(true)
+  totalBookings Float?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Template {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  category    String   // e.g. Promotional, Festival, Birthday
+  content     String   // text with {{1}}, {{2}} etc.
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Campaign {
+  id            String   @id @default(uuid())
+  name          String
+  templateId    String
+  audience      String   // e.g. Previous Guests, Local
+  filters       String?  // JSON string of additional filters
+  status        String   @default("DRAFT") // DRAFT, SCHEDULED, SENT
+  recipients    Int      @default(0)
+  sentCount     Int      @default(0)
+  deliveredCount Int     @default(0)
+  readCount     Int      @default(0)
+  clickedCount  Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}

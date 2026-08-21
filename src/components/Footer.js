@@ -31,6 +31,8 @@ export default function Footer() {
           <Link href="/kozhikode">Discover Kozhikode</Link>
           <Link href="/gallery">Gallery</Link>
           <Link href="/contact">Contact</Link>
+          <Link href="/hotel-policy">Hotel Policies</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
         </div>
 
         <div className="footer-contact">
@@ -70,8 +72,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="container">
-          <p>&copy; Hotel Neelagiri Heritage. All Rights Reserved.</p>
+        <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+          <p style={{ margin: 0 }}>&copy; {new Date().getFullYear()} Hotel Neelagiri Heritage. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

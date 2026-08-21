@@ -1,8 +1,6 @@
 import { Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { Analytics } from '@vercel/analytics/next';
+
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
@@ -71,10 +69,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${playfair.variable} ${inter.variable}`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <Analytics />
+        {children}
       </body>
     </html>
   );

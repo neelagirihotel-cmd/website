@@ -1,0 +1,120 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--primary-violet);
+  margin-bottom: 24px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.statCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(92, 82, 153, 0.05);
+  border: 1px solid rgba(92, 82, 153, 0.1);
+  transition: var(--transition-smooth);
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(92, 82, 153, 0.1);
+}
+
+.statIconWrapper {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: rgba(92, 82, 153, 0.1);
+  color: var(--primary-violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-family: var(--font-serif);
+}
+
+.quickCampaignsSection {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(92, 82, 153, 0.05);
+  border: 1px solid rgba(92, 82, 153, 0.1);
+}
+
+.sectionHeader {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--primary-violet);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quickGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.quickCard {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  background-color: rgba(212, 175, 55, 0.05);
+  color: var(--text-dark);
+  font-weight: 500;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.quickCard:hover {
+  background-color: var(--accent-gold);
+  color: #fff;
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+.customCampaignWrap {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(92, 82, 153, 0.1);
+  text-align: center;
+}

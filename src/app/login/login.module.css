@@ -1,0 +1,91 @@
+.loginContainer {
+  min-height: calc(100vh - 200px); /* Adjusting for header/footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: var(--bg-color);
+}
+
+.loginCard {
+  background: #ffffff;
+  max-width: 450px;
+  width: 100%;
+  padding: 50px 40px;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(92, 82, 153, 0.08);
+  border: 1px solid rgba(92, 82, 153, 0.1);
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h2 {
+  font-family: var(--font-serif);
+  color: var(--primary-violet);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: var(--secondary-violet);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-dark);
+  transition: var(--transition-smooth);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--primary-violet);
+  box-shadow: 0 0 0 3px rgba(92, 82, 153, 0.1);
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 28px;
+}
+
+.error {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}

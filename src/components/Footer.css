@@ -94,3 +94,13 @@
     grid-template-columns: 1fr;
   }
 }
+
+.footer-policy-link {
+  color: #777;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-policy-link:hover {
+  color: var(--primary-violet);
+}
