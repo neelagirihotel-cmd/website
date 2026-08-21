@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '../shared.module.css';
+import styles from '@/app/shared.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Wifi, Wind, BedDouble, Briefcase, Sparkles, Clock, Plane, Utensils, Presentation, Accessibility, Users } from 'lucide-react';

@@ -1,4 +1,4 @@
-import styles from '../shared.module.css';
+import styles from '@/app/shared.module.css';
 import Image from 'next/image';
 
 export const metadata = {

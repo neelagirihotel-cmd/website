@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import styles from '../shared.module.css';
+import styles from '@/app/shared.module.css';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
