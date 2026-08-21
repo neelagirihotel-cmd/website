@@ -74,19 +74,29 @@
 
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 18px;
   margin-top: 15px;
+  align-items: center;
 }
 
 .social-links a {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--primary-violet);
   transition: var(--transition-smooth);
+  opacity: 0.85;
+}
+
+.social-links a svg {
+  width: 28px;
+  height: 28px;
 }
 
 .social-links a:hover {
   color: var(--accent-gold);
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.1);
+  opacity: 1;
 }
 
 @media (max-width: 900px) {
