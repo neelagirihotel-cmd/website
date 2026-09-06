@@ -1,7 +1,7 @@
 .pageHeader {
   position: relative;
-  height: 60vh;
-  min-height: 500px;
+  height: 60dvh;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +29,7 @@
 
 .pageTitle {
   font-family: var(--font-serif);
-  font-size: 3.5rem;
+  font-size: var(--fluid-h1);
   line-height: 1.1;
   margin-bottom: 20px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -37,7 +37,7 @@
 
 .pageSubtitle {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: var(--fluid-h3);
   color: #f5f5f5;
   font-style: italic;
 }
@@ -67,7 +67,7 @@
 
 .blockTitle {
   font-family: var(--font-serif);
-  font-size: 2.8rem;
+  font-size: var(--fluid-h2);
   font-weight: 400;
   color: var(--text-dark);
   margin-bottom: 25px;
@@ -131,8 +131,8 @@
 /* Grid for Gallery/Rooms */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: var(--fluid-gap);
   margin-top: 60px;
 }
 
@@ -275,20 +275,17 @@
 
 .cardActions > a {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 10px;
-  font-size: 0.9rem;
+  padding: 12px 5px;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  min-height: 48px;
 }
 
 @media (max-width: 768px) {
-  .pageTitle {
-    font-size: 2.4rem;
-  }
-  
-  .pageSubtitle {
-    font-size: 1.1rem;
-  }
-  
   .pageHeaderContent {
     margin-top: 80px; /* Adjust for fixed navbar */
   }
@@ -306,7 +303,7 @@
 .luxuryHeroImage {
   position: relative;
   width: 100%;
-  height: 600px;
+  aspect-ratio: 16/9;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0,0,0,0.08);
@@ -320,7 +317,7 @@
 
 .luxuryRoomTitle {
   font-family: var(--font-serif);
-  font-size: 3rem;
+  font-size: var(--fluid-h2);
   font-weight: 400;
   color: var(--text-dark);
   margin-bottom: 25px;
@@ -386,7 +383,7 @@
 
 .luxurySectionTitle {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: var(--fluid-h3);
   font-weight: 400;
   color: var(--text-dark);
   margin-bottom: 25px;
@@ -441,12 +438,6 @@
 }
 
 @media (max-width: 768px) {
-  .luxuryRoomTitle {
-    font-size: 2.2rem;
-  }
-  .luxuryHeroImage {
-    height: 250px;
-  }
   .luxuryAmenitiesGrid {
     grid-template-columns: 1fr;
   }

@@ -5,6 +5,8 @@
   display: flex;
   justify-content: center;
   padding: 0 20px;
+  container-type: inline-size;
+  container-name: widget;
 }
 
 .widgetContainer {
@@ -80,7 +82,7 @@
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@container widget (max-width: 768px) {
   .widgetContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
