@@ -3,7 +3,7 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/',
+      disallow: ['/admin/', '/api/', '/login/'],
     },
     sitemap: 'https://neelagiriheritage.com/sitemap.xml',
   };

@@ -60,5 +60,17 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.9,
     },
+    {
+      url: 'https://neelagiriheritage.com/hotel-policy',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://neelagiriheritage.com/privacy-policy',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
   ];
 }

@@ -4,6 +4,11 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Privacy Policy | Hotel Neelagiri Heritage',
   description: 'Privacy Policy and Data Protection standards for Hotel Neelagiri Heritage.',
+  openGraph: {
+    title: 'Privacy Policy | Hotel Neelagiri Heritage',
+    description: 'Privacy Policy and Data Protection standards for Hotel Neelagiri Heritage.',
+    url: 'https://neelagiriheritage.com',
+  },
 };
 
 export default function PrivacyPolicy() {

@@ -6,6 +6,11 @@ export const metadata = {
   title: 'Business Suites',
   description: 'Spacious luxury accommodation designed for executives and extended stays in Kozhikode.',
   alternates: { canonical: '/accommodation/business-suites' },
+  openGraph: {
+    title: 'Business Suites',
+    description: 'Spacious luxury accommodation designed for executives and extended stays in Kozhikode.',
+    url: 'https://neelagiriheritage.com/accommodation/business-suites',
+  },
 };
 import Link from 'next/link';
 import { Wifi, Wind, BedDouble, Briefcase, Sparkles, Users, Sofa, ArrowLeft } from 'lucide-react';
@@ -46,7 +51,7 @@ export default function BusinessSuites() {
           </p>
           
           <div className={styles.luxuryActions}>
-            <a href="https://letsbook.me/booking/022577" className="btn-primary">Book Now</a>
+            <a href="https://letsbook.me/booking/022577" rel="nofollow noopener noreferrer" className="btn-primary">Book Now</a>
             <Link href="/contact#enquiry" className="btn-outline">Enquire</Link>
           </div>
         </div>

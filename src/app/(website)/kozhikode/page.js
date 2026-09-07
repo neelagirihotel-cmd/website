@@ -5,6 +5,11 @@ export const metadata = {
   title: 'Discover Kozhikode',
   description: 'Explore the soul of Malabar. Discover historic landmarks, vibrant markets, serene beaches, and authentic cuisine in Kozhikode.',
   alternates: { canonical: '/kozhikode' },
+  openGraph: {
+    title: 'Discover Kozhikode',
+    description: 'Explore the soul of Malabar. Discover historic landmarks, vibrant markets, serene beaches, and authentic cuisine in Kozhikode.',
+    url: 'https://neelagiriheritage.com/kozhikode',
+  },
 };
 
 export default function Kozhikode() {

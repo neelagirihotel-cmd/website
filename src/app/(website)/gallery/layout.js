@@ -2,6 +2,11 @@ export const metadata = {
   title: 'Gallery',
   description: 'Explore the moments worth remembering at Hotel Neelagiri Heritage. View our luxury rooms, wellness center, and city experiences.',
   alternates: { canonical: '/gallery' },
+  openGraph: {
+    title: 'Gallery',
+    description: 'Explore the moments worth remembering at Hotel Neelagiri Heritage. View our luxury rooms, wellness center, and city experiences.',
+    url: 'https://neelagiriheritage.com/gallery',
+  },
 };
 
 export default function GalleryLayout({ children }) {

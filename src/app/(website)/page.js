@@ -6,6 +6,11 @@ export const metadata = {
   title: 'Hotel Neelagiri Heritage | A Smart Business Hotel in Kozhikode',
   description: 'Experience the ultimate luxury, heritage, and authentic Ayurveda wellness at Hotel Neelagiri Heritage. A Smart Business Hotel located in Kozhikode.',
   alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Hotel Neelagiri Heritage | A Smart Business Hotel in Kozhikode',
+    description: 'Experience the ultimate luxury, heritage, and authentic Ayurveda wellness at Hotel Neelagiri Heritage. A Smart Business Hotel located in Kozhikode.',
+    url: 'https://neelagiriheritage.com/',
+  },
 };
 
 import { MapPin, BedDouble, Briefcase, Leaf, HeartHandshake, Compass } from 'lucide-react';
@@ -37,7 +42,7 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={1.0} direction="up">
             <div className={styles.heroActions}>
-              <a href="https://letsbook.me/booking/022577">
+              <a href="https://letsbook.me/booking/022577" rel="nofollow noopener noreferrer">
                 <button className="btn-primary">Book Your Stay</button>
               </a>
               <Link href="/heritage"><button className="btn-outline" style={{ borderColor: '#fff', color: '#fff' }}>Explore Our Heritage</button></Link>
@@ -228,7 +233,7 @@ export default function Home() {
               <p className={styles.sectionLead} style={{maxWidth: '800px', margin: '0 auto 40px auto'}}>
                 Whether your journey brings you to Kozhikode for business, leisure, or a brief stop before continuing onward, Hotel Neelagiri Heritage welcomes you with warmth, comfort, and impeccable service.
               </p>
-              <a href="https://letsbook.me/booking/022577">
+              <a href="https://letsbook.me/booking/022577" rel="nofollow noopener noreferrer">
                 <button className="btn-primary">Book your stay today</button>
               </a>
             </div>

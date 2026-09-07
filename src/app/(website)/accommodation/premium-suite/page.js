@@ -6,6 +6,11 @@ export const metadata = {
   title: 'Premium Suite',
   description: 'An elevated experience featuring generous living spaces and refined luxury interiors in Kozhikode.',
   alternates: { canonical: '/accommodation/premium-suite' },
+  openGraph: {
+    title: 'Premium Suite',
+    description: 'An elevated experience featuring generous living spaces and refined luxury interiors in Kozhikode.',
+    url: 'https://neelagiriheritage.com/accommodation/premium-suite',
+  },
 };
 import Link from 'next/link';
 import { Wifi, Wind, BedDouble, Briefcase, Sparkles, Users, Sofa, Presentation, ArrowLeft } from 'lucide-react';
@@ -49,7 +54,7 @@ export default function PremiumSuite() {
           </p>
           
           <div className={styles.luxuryActions}>
-            <a href="https://letsbook.me/booking/022577" className="btn-primary">Book Now</a>
+            <a href="https://letsbook.me/booking/022577" rel="nofollow noopener noreferrer" className="btn-primary">Book Now</a>
             <Link href="/contact#enquiry" className="btn-outline">Enquire</Link>
           </div>
         </div>

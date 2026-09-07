@@ -8,6 +8,11 @@ export const metadata = {
   title: 'Smart Rooms',
   description: 'Contemporary comfort for short business stays and solo travellers.',
   alternates: { canonical: '/accommodation/smart-rooms' },
+  openGraph: {
+    title: 'Smart Rooms',
+    description: 'Contemporary comfort for short business stays and solo travellers.',
+    url: 'https://neelagiriheritage.com/accommodation/smart-rooms',
+  },
 };
 
 export default function SmartRooms() {
@@ -47,7 +52,7 @@ export default function SmartRooms() {
           </p>
           
           <div className={styles.luxuryActions}>
-            <a href="https://letsbook.me/booking/022577" className="btn-primary">Book Now</a>
+            <a href="https://letsbook.me/booking/022577" rel="nofollow noopener noreferrer" className="btn-primary">Book Now</a>
             <Link href="/contact#enquiry" className="btn-outline">Enquire</Link>
           </div>
         </div>

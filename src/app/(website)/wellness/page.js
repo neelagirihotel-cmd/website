@@ -5,6 +5,11 @@ export const metadata = {
   title: 'Ayurveda Wellness',
   description: 'Discover authentic Ayurveda and premium wellness experiences at Hotel Neelagiri Heritage, featuring AVVVS Ayur Speciality Clinic and Gloveda.',
   alternates: { canonical: '/wellness' },
+  openGraph: {
+    title: 'Ayurveda Wellness',
+    description: 'Discover authentic Ayurveda and premium wellness experiences at Hotel Neelagiri Heritage, featuring AVVVS Ayur Speciality Clinic and Gloveda.',
+    url: 'https://neelagiriheritage.com/wellness',
+  },
 };
 import Link from 'next/link';
 

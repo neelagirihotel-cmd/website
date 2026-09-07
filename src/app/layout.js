@@ -19,6 +19,28 @@ export const metadata = {
     default: 'Hotel Neelagiri Heritage | A Smart Business Hotel in Kozhikode',
   },
   description: 'Experience the ultimate luxury and heritage at Hotel Neelagiri Heritage by Citrine. A Smart Business Hotel located in Kozhikode.',
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://neelagiriheritage.com',
+    siteName: 'Hotel Neelagiri Heritage',
+    title: 'Hotel Neelagiri Heritage | A Smart Business Hotel in Kozhikode',
+    description: 'Experience the ultimate luxury and heritage at Hotel Neelagiri Heritage by Citrine. A Smart Business Hotel located in Kozhikode.',
+    images: [
+      {
+        url: '/images/hero.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Hotel Neelagiri Heritage',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hotel Neelagiri Heritage | A Smart Business Hotel in Kozhikode',
+    description: 'Experience the ultimate luxury and heritage at Hotel Neelagiri Heritage by Citrine. A Smart Business Hotel located in Kozhikode.',
+    images: ['/images/hero.webp'],
+  },
 };
 
 const jsonLd = {
